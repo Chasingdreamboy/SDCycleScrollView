@@ -198,6 +198,8 @@ static CGSize const kDefaultDotSize = {8, 8};
     CGFloat y = (CGRectGetHeight(self.frame) - self.dotSize.height) / 2;
     
     dot.frame = CGRectMake(x, y, self.dotSize.width, self.dotSize.height);
+    dot.layer.cornerRadius = self.dotSize.height / 2.0;
+    dot.layer.masksToBounds = YES;
 }
 
 
